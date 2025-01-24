@@ -1,0 +1,64 @@
+
+body {
+  margin: 0;
+  padding-top: 64px; 
+}
+
+/* Navbar Typography */
+.navbar-typography {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.nav-button {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Drawer Links */
+.drawer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.drawer-link:hover {
+  background-color: #f0f0f0;
+}
+
+/* Drawer Styles */
+.MuiDrawer-paper {
+  width: 250px;
+}
+
+/* Menu Styling */
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+/* Icon Button Styling */
+.icon-button {
+  transform: scale(1.5);
+}

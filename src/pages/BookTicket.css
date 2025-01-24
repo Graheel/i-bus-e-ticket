@@ -1,0 +1,77 @@
+
+.book-ticket-container {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff9e6, #fff0b3); 
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+}
+
+.book-ticket {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #a8d0e6; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.book-ticket h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.book-ticket .form-group {
+  margin-bottom: 20px;
+}
+
+.book-ticket .form-group label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.book-ticket .form-group input,
+.book-ticket .form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.book-ticket .price-details {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.book-ticket .btn-submit {
+  display: block;
+  width: 100%;
+  background-color: #2c3e50;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.book-ticket .btn-submit:hover {
+  background-color: #34495e;
+}

@@ -1,0 +1,103 @@
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(to bottom, #ffeb3b, #4caf50); 
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Heading styling */
+.contact-page h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contact form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Individual form group styling */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Input and textarea fields */
+input,
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+/* Submit button styling */
+.submit-btn {
+  background-color: #ff9800;
+  color: white;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #f57c00;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .contact-page {
+    padding: 20px;
+  }
+
+  .submit-btn {
+    padding: 12px 20px;
+  }
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
