@@ -3,10 +3,12 @@ import UserLoginForm from "./UserLoginForm";
 import AdminLoginForm from "./AdminLoginForm";
 import UserRegisterForm from "./UserRegisterForm";
 import AdminRegisterForm from "./AdminRegisterForm";
-import "./AuthSwitch.css"; 
+import DriverLoginForm from "./DriverLoginForm";
+import DriverRegisterForm from "./DriverRegisterForm";
+import "./AuthSwitch.css";
 
-const AuthSwitch = ({ isUser, setIsUser }) => {
-  const [isLogin, setIsLogin] = useState(true); 
+const AuthSwitch = ({ authType, setAuthType }) => {
+  const [isLogin, setIsLogin] = useState(true);
 
   const handleSwitch = () => {
     setIsLogin(!isLogin);
@@ -15,30 +17,44 @@ const AuthSwitch = ({ isUser, setIsUser }) => {
   return (
     <div className="auth-container">
       <div className="auth-header">
-        <h2>{isLogin ? (isUser ? "User Login" : "Admin Login") : (isUser ? "User Register" : "Admin Register")}</h2>
+        <h2>
+          {isLogin
+            ? authType === "user"
+              ? "User Login"
+              : authType === "admin"
+              ? "Admin Login"
+              : "Driver Login"
+            : authType === "user"
+            ? "User Register"
+            : authType === "admin"
+            ? "Admin Register"
+            : "Driver Register"}
+        </h2>
         <button className="switch-btn" onClick={handleSwitch}>
           {isLogin ? "Switch to Register" : "Switch to Login"}
         </button>
       </div>
-      
-      {/* Conditionally render login or register forms based on state */}
-      {isUser ? (
-        isLogin ? (
-          <UserLoginForm />
-        ) : (
-          <UserRegisterForm />
-        )
+
+      {/* Conditional rendering of login/register forms */}
+      {authType === "user" ? (
+        isLogin ? <UserLoginForm /> : <UserRegisterForm />
+      ) : authType === "admin" ? (
+        isLogin ? <AdminLoginForm /> : <AdminRegisterForm />
+      ) : isLogin ? (
+        <DriverLoginForm />
       ) : (
-        isLogin ? (
-          <AdminLoginForm />
-        ) : (
-          <AdminRegisterForm />
-        )
+        <DriverRegisterForm />
       )}
 
       <div className="auth-toggle">
-        <button onClick={() => setIsUser(!isUser)} className="switch-user">
-          Switch to {isUser ? "Admin" : "User"}
+        <button onClick={() => setAuthType("user")} className="switch-user">
+          User
+        </button>
+        <button onClick={() => setAuthType("admin")} className="switch-user">
+          Admin
+        </button>
+        <button onClick={() => setAuthType("driver")} className="switch-user">
+          Driver
         </button>
       </div>
     </div>

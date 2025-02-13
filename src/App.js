@@ -12,11 +12,13 @@ import AdminDashboard from "./admin/AdminDashboard";
 import ErrorBoundary from "./components/ErrorBoundary";
 import UsersPage from "./admin/UsersPage";
 import ContentPage from "./admin/ContentPage";
+import AuthContainer from "./components/AuthContainer";
 
 import "./App.css";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(true);
+  const [authType, setAuthType] = useState("user"); // Manage auth type
 
   return (
     <Router>
@@ -59,7 +61,7 @@ function App() {
             path="/login-register"
             element={
               <ErrorBoundary>
-                <LoginRegisterPage />
+                <AuthContainer authType={authType} setAuthType={setAuthType} />
               </ErrorBoundary>
             }
           />
